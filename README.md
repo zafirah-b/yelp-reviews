@@ -67,4 +67,5 @@ SELECT *
 FROM user_ne
 """)
 ```
+* aggregate dataset in spark dataframe format before converting to Pandas df for plotting to avoid errors
 * plot review length by grouping
