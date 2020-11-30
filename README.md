@@ -29,7 +29,8 @@
 
 [1]:https://github.com/zafirah-b/yelp-reviews/blob/main/part2_plot.png
 
-*
+* From this plot we see that Restaurants is the most common business type, followed by Shopping, and Food. There may be overlap between some of the categories such as Food, Sandwiches, Fast Food, American (Traditional), and Pizza.
+
 ## Part III - Do Yelp reviews skew negative?
 * Load user, reviews datasets from S3 bucket
 * Obtain avg stars for reviews that contain written text as part of the review
@@ -46,6 +47,8 @@ GROUP BY business_id
 * Calculate the skew and plot it `br.withColumn("diff", (F.col("avg(stars)") - F.col("stars"))/F.col("stars"))`
 
 ![PartIII_Plot](https://github.com/zafirah-b/yelp-reviews/blob/main/part3_plot.PNG)
+
+* Written yelp reviews skew positive. As seen in the chart, reviewers who leave written reviews rate businesses from 0.00 to 0.25 higher than reviewers who do not provide written comments.
 
 ## Part IV - Elite Analysis
 ## How do reviews vary based on Elite status?
@@ -79,3 +82,5 @@ FROM user_ne
 * plot review length by grouping
 
 ![PartIV_Plot](https://github.com/zafirah-b/yelp-reviews/blob/main/part4_plot.PNG)
+
+* From this plot, we see that not suprisingly, non-elite reviews write the shortest reviews. Early stage Elite Yelpers wrote longer reviews than late stage Elite Yelpers. Assuming that a longer review implies higher quality, this supports the theory that Elite Yelpers quality/value add decreased over time.
