@@ -1,6 +1,6 @@
 # yelp-reviews-analysis
 
-[Github link to README here](https://github.com/zafirah-b/yelp-reviews/blob/main/README.md)
+[Github link to README here - to see plots/charts](https://github.com/zafirah-b/yelp-reviews/blob/main/README.md)
 
 ## Cluster Configuration
 ![cluster_image](assets/cluster_configuration.png)
