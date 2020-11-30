@@ -1,5 +1,7 @@
 # yelp-reviews-analysis
 
+[Github link to README here](https://github.com/zafirah-b/yelp-reviews/blob/main/README.md)
+
 ## Cluster Configuration
 ![cluster_image](assets/cluster_configuration.png)
 
@@ -23,7 +25,11 @@
 * Calculate total unique categories `all_cats.select('category').distinct().count()`
 * Identify top 20 categories and plot it `all_cats.select('category').groupby('category').count().orderBy('count',ascending=False)`
 
+![PartII_Plot][1]
 
+[1]:https://github.com/zafirah-b/yelp-reviews/blob/main/part2_plot.png
+
+*
 ## Part III - Do Yelp reviews skew negative?
 * Load user, reviews datasets from S3 bucket
 * Obtain avg stars for reviews that contain written text as part of the review
@@ -38,6 +44,8 @@ GROUP BY business_id
 ```
 * Join the reviews and business datasets `bus_rev = bdf.join(df, bdf.business_id == df.business_id)`
 * Calculate the skew and plot it `br.withColumn("diff", (F.col("avg(stars)") - F.col("stars"))/F.col("stars"))`
+
+![PartIII_Plot](https://github.com/zafirah-b/yelp-reviews/blob/main/part3_plot.PNG)
 
 ## Part IV - Elite Analysis
 ## How do reviews vary based on Elite status?
@@ -69,3 +77,5 @@ FROM user_ne
 ```
 * aggregate dataset in spark dataframe format before converting to Pandas df for plotting to avoid errors
 * plot review length by grouping
+
+![PartIV_Plot](https://github.com/zafirah-b/yelp-reviews/blob/main/part4_plot.PNG)
