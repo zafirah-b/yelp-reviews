@@ -2,13 +2,12 @@
 
 
 
-https://www.eater.com/2019/2/7/18214520/instagram-influencers-yelp-elite-online-restaurant-reviews
 
 ## Cluster Configuration
-
+![cluster_image](assets/cluster_configuration.png)
 
 ## Notebook Configuration
-
+![notebook_image](assets/notebook_configuration.png)
 
 ## Set Up
 * Create S3 Bucket and upload Yelp dataset
@@ -36,8 +35,10 @@ https://www.eater.com/2019/2/7/18214520/instagram-influencers-yelp-elite-online-
 * Calculate the skew and plot it
 
 ## Part IV - Elite Analysis
-## How do reviews vary based on elite status?
+## How do reviews vary based on Elite status?
 * Users are grouped into 3 categories - "none" (not Elite), "early" (early Elite - prior to 2012), "late" (late Elite - 2012 and after)
+* *Background* - Yelp's cultural peak is assumed to be 2011, so we assume post-2011 is when Yelp Elite became more *corrupted*, for lack of a better word. *Source: 
+https://www.eater.com/2019/2/7/18214520/instagram-influencers-yelp-elite-online-restaurant-reviews*
 
 
 
